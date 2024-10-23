@@ -1,0 +1,161 @@
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: #f0f2f5;
+  color: #213F7D;
+}
+
+.landing-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.landing-header {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #213F7D;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.login-button {
+  color: #213F7D;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+.cta-button {
+  padding: 0.5rem 1rem;
+  background-color: #39CDCC;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.cta-button:hover {
+  cursor: not-allowed;
+}
+
+.landing-main {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-illustration {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #213F7D;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #213F7D;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.primary-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #39CDCC;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.primary-button:hover {
+  cursor: not-allowed;
+}
+
+.secondary-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #ffffff;
+  color: #213F7D;
+  border: 2px solid #39CDCC;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.secondary-button:hover {
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .landing-header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .nav-menu {
+    margin-top: 1rem;
+  }
+  .landing-main {
+    padding: 2rem 1rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.25rem;
+  }
+  .landing-main {
+    padding: 1.5rem;
+  }
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  .hero p {
+    font-size: 0.875rem;
+  }
+  .cta-buttons {
+    gap: 0.5rem;
+  }
+}/*# sourceMappingURL=landing.css.map */
