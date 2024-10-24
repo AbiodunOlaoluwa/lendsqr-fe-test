@@ -10,7 +10,7 @@ export default function LandingPage() {
       <header className="landing-header">
         <div className="logo">
           {/* Logo image for the landing page header */}
-          <Image src={Logo} alt="Lendsqr Logo" width={150} height={50} />
+          <Image src={Logo} alt="Lendsqr Logo" width={150} height={50} priority />
         </div>
         <nav className="nav-menu">
           {/* Link to the login page */}
@@ -32,6 +32,7 @@ export default function LandingPage() {
             className="hero-illustration"
             width={600}
             height={400}
+            priority
           />
           {/* Main headline to attract users */}
           <h1>The best loan management system for smart lenders</h1>

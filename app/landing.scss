@@ -31,6 +31,9 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   color: $secondary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-menu {

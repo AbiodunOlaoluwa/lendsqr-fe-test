@@ -1,9 +1,12 @@
-import React from 'react'
+import NavBar from "../components/AppNavbar/NavBar";
+import "./dashboard.css"
 
-const page = () => {
+const Page = () => {
   return (
-    <div>page</div>
+    <div className="dashboard-container">
+      <NavBar />
+    </div>
   )
 }
 
-export default page
+export default Page

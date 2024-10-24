@@ -8,11 +8,11 @@ jest.mock('next/navigation', () => ({
 }));
 
 describe('LoginPage', () => {
-  let pushMock: jest.Mock;
+  let replaceMock: jest.Mock;
 
   beforeEach(() => {
-    pushMock = jest.fn();
-    (useRouter as jest.Mock).mockReturnValue({ push: pushMock });
+    replaceMock = jest.fn();
+    (useRouter as jest.Mock).mockReturnValue({ replace: replaceMock });
   });
 
   it('should render login page elements correctly', () => {
@@ -78,8 +78,8 @@ describe('LoginPage', () => {
     // Click login button
     fireEvent.click(screen.getByText('LOG IN'));
 
-    // Check if router push was called with dashboard route
-    expect(pushMock).toHaveBeenCalledWith('/dashboard');
+    // Check if router replace was called with dashboard route
+    expect(replaceMock).toHaveBeenCalledWith('/dashboard');
   });
 
   it('should toggle password visibility', () => {
