@@ -4,6 +4,9 @@ body {
 
 .dashboard-container {
   background: #FBFBFB;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
   width: 100dvw;
   height: 100dvh;
   padding: 0;
@@ -12,4 +15,11 @@ body {
 .dashboard-container a {
   text-decoration: none;
   color: inherit;
+}
+.dashboard-container .dashboard-body-container {
+  width: 100dvw;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  gap: 0;
 }/*# sourceMappingURL=dashboard.css.map */

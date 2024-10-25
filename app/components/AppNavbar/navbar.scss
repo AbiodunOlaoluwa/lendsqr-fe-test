@@ -6,8 +6,9 @@
     padding: 2rem 3rem;
     background: #FFFFFF;
     box-shadow: 3px 0px 20px 0px #0000000A;
+    flex-shrink: 1;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
         padding: 1rem 2rem;
     }
 
@@ -17,10 +18,14 @@
         justify-content: space-evenly;
         align-items: center;
 
-        @media (max-width: 768px) {
-            gap: 1rem;
+        @media (max-width: 1200px) {
+            gap: 6rem;
             width: 100%;
-            justify-content: space-between;
+            justify-content: flex-start;
+        }
+
+        @media (max-width: 768px) {
+            justify-content: center;
         }
 
         .navbar-logo-container {
@@ -32,16 +37,17 @@
                 display: none; // Hide the logo on mobile devices
             }
         }
-        
+
         .searchbar-container {
             display: flex;
             gap: 0;
-            height: 50px;
+            height: 40px;
             width: 450px;
+            margin-right: 1rem;
 
             @media (max-width: 768px) {
                 width: 100%; // Shrink search bar to fit available space on mobile
-                max-width: 200px;
+                max-width: 450px;
                 flex-grow: 1;
             }
 
@@ -61,6 +67,7 @@
                     border-color: #39CDCC;
                 }
             }
+
             .magnifying-glass-container {
                 background: #39CDCC;
                 width: 15%;
@@ -69,35 +76,32 @@
                 justify-content: center;
                 border-radius: 0 8px 8px 0;
                 transition: background-color 0.3s ease;
+
                 &:hover {
                     cursor: pointer;
                     background-color: #33b0b5;
                 }
-
-                @media (max-width: 768px) {
-                    width: 40px;
-                }
             }
         }
     }
-    
+
     .links-profile-container {
         display: flex;
         gap: 2rem;
         align-items: center;
         color: #213F7D;
 
-        @media (max-width: 768px) {
+        @media (max-width: 1200px) {
             display: none; // Hide links and profile container on mobile, replaced by hamburger menu
         }
 
         .docs-link {
-            font-size: 1.5rem;
             font-weight: 350;
             line-height: 150%;
             text-decoration: underline;
             text-decoration-thickness: 2px;
             text-underline-offset: 3px;
+
             &:hover {
                 cursor: not-allowed;
             }
@@ -105,19 +109,19 @@
 
         .notification-bell-container {
             &:hover {
-              cursor: pointer;
-              animation: ring 1s ease-in-out;
+                cursor: pointer;
+                animation: ring 1s ease-in-out;
             }
 
             @keyframes ring {
-              0% { transform: rotate(0deg); }
-              10% { transform: rotate(15deg); }
-              20% { transform: rotate(-10deg); }
-              30% { transform: rotate(15deg); }
-              40% { transform: rotate(-10deg); }
-              50% { transform: rotate(5deg); }
-              60% { transform: rotate(-5deg); }
-              100% { transform: rotate(0deg); }
+                0% { transform: rotate(0deg); }
+                10% { transform: rotate(15deg); }
+                20% { transform: rotate(-10deg); }
+                30% { transform: rotate(15deg); }
+                40% { transform: rotate(-10deg); }
+                50% { transform: rotate(5deg); }
+                60% { transform: rotate(-5deg); }
+                100% { transform: rotate(0deg); }
             }
         }
 
@@ -137,7 +141,7 @@
                 }
 
                 .account-username {
-                    font-size: 1.2rem;
+                    font-size: 1.1rem;
                 }
             }
         }
@@ -146,9 +150,35 @@
     .hamburger-menu {
         display: none;
         cursor: pointer;
+        flex-direction: column;
+        gap: 0.4rem;
+        z-index: 1100;
 
-        @media (max-width: 768px) {
+        @media (max-width: 1200px) {
             display: block;
+        }
+
+        .hamburger-line {
+            width: 30px;
+            height: 3px;
+            background-color: #213F7D;
+            margin: 5px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        &.active {
+            .hamburger-line:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .hamburger-line:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger-line:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
         }
     }
 }
@@ -164,8 +194,9 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 1rem;
+    z-index: 1000;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -189,4 +220,4 @@
         display: flex;
         gap: 0.5rem;
     }
-} 
+}

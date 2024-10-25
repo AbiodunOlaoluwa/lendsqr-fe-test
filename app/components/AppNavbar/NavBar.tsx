@@ -29,7 +29,7 @@ const NavBar = () => {
             <Image
               src={logo}
               alt="lendsqr-logo"
-              width={200}
+              width={150}
               height={50}
             />
           </div>
@@ -53,8 +53,8 @@ const NavBar = () => {
             <Image 
               src={bell}
               alt="notification bell"
-              height={32}
-              width={32}
+              height={24}
+              width={24}
             />
           </div>
           {/* User avatar and dropdown details */}
@@ -79,13 +79,10 @@ const NavBar = () => {
           </div>
         </div>
         {/* Hamburger menu icon for mobile view */}
-        <div className="hamburger-menu" onClick={toggleHamburgerMenu}>
-          <Image
-            src={isHamburgerOpen ? closeIcon : hamburgerIcon}
-            alt="hamburger menu"
-            width={32}
-            height={32}
-          />
+        <div className={`hamburger-menu ${isHamburgerOpen ? 'active' : ''}`} onClick={toggleHamburgerMenu}>
+          <div className="hamburger-line"></div>
+          <div className="hamburger-line"></div>
+          <div className="hamburger-line"></div>
         </div>
       </div>
       {/* Hamburger menu expanded view for mobile */}
@@ -97,7 +94,7 @@ const NavBar = () => {
           <div className="notification-bell-container">
             <Image 
               src={bell}
-              alt="notificatinon bell"
+              alt="notification bell"
               height={32}
               width={32}
             />

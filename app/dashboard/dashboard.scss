@@ -1,9 +1,15 @@
+$text-color-1: #213F7D;
+$text-color-2: #545F7D;
+
 body {
     font-family: 'Work Sans', sans-serif;
 }
 
 .dashboard-container {
     background: #FBFBFB;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
     width: 100dvw;
     height: 100dvh;
     padding: 0;
@@ -14,5 +20,13 @@ body {
         color: inherit;
     }
 
-    
+    .dashboard-body-container {
+        width: 100dvw;
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+        gap: 0;
+
+        
+    }
 }

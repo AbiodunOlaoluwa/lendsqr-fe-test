@@ -5,7 +5,7 @@ import React from 'react';
 jest.mock('next/image', () => ({
   __esModule: true,
   default: ({ src, alt }: { src: string, alt: string }) => (
-    //nextjs next/image Image tage uses too much memory
+    //disablesd becasuse nextjs next/image Image tag uses too much memory
     // eslint-disable-next-line @next/next/no-img-element
     <img src={src} alt={alt} />
   ),
