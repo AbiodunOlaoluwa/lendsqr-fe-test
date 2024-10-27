@@ -250,6 +250,7 @@ body {
   font-weight: 500;
   font-size: 0.9rem;
   text-overflow: ellipsis;
+  width: 100%;
 }
 .user-details-page-container .user-details-content .education-employment {
   width: 100%;
@@ -292,6 +293,7 @@ body {
   color: #545F7D;
   font-weight: 500;
   font-size: 0.9rem;
+  width: 100%;
 }
 .user-details-page-container .user-details-content .socials {
   width: 100%;
@@ -338,6 +340,7 @@ body {
   color: #545F7D;
   font-weight: 500;
   font-size: 0.9rem;
+  width: 100%;
 }
 .user-details-page-container .user-details-content .guarantor-info {
   width: 100%;
@@ -383,4 +386,5 @@ body {
   color: #545F7D;
   font-weight: 500;
   font-size: 0.9rem;
+  width: 100%;
 }/*# sourceMappingURL=userDetails.css.map */
