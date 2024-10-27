@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import UserDetailsPage from '../dashboard/users/[id]/page';
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { jest } from '@jest/globals';
 
 jest.mock('next/navigation', () => ({
