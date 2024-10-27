@@ -10,6 +10,11 @@ The application is deployed on Vercel and can be accessed via the following URL:
 
 [https://abiodun-olaoluwa-solomon-lendsqr-fe-test.vercel.app](https://abiodun-olaoluwa-solomon-lendsqr-fe-test.vercel.app)
 
+## Login Details
+
+Email: test@lendsqr.com
+Password: password123
+
 ## Repository Details
 
 This is the public repository containing the source code for the Lendsqr frontend test.
