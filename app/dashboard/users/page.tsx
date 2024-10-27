@@ -142,6 +142,20 @@ const Page: React.FC = () => {
     setCurrentPage(1); // Reset to first page after applying filters
   };
 
+  const handleResetFilters = () => {
+    setFilters({
+      organization: '',
+      username: '',
+      email: '',
+      phone: '',
+      date: '',
+      status: '',
+    });
+    // Manually reset filtered data after clearing filters
+    setFilteredUsersData(usersData);
+    setCurrentPage(1); // Reset to the first page
+  };
+
     // Navigate to user details page
     const navigateToUserDetails = (userId: string) => {
       router.push(`/dashboard/users/${userId}`);
@@ -221,7 +235,6 @@ const Page: React.FC = () => {
                 alt='filter icon' 
                 className='filter' 
                 onClick={toggleFilterMenu} 
-                // onMouseEnter={toggleFilterMenu}
               />
               {/* Filter menu (initially hidden) */}
               <div className="filter-menu hidden">
@@ -229,7 +242,7 @@ const Page: React.FC = () => {
                   <div className="filter-option">
                     <p className="filter-option-title-text">Organization</p>
                     <div className="filter-option-input-container">
-                      <input type="text" placeholder="Select" className="filter-option-input" />
+                      <input type="text" placeholder="Select" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'organization')} value={filters.organization} />
                       <Image 
                       src={filterDropDownArrow}
                       alt="filterDropDownArrow"
@@ -239,19 +252,19 @@ const Page: React.FC = () => {
                   <div className="filter-option">
                     <p className="filter-option-title-text">Username</p>
                     <div className="filter-option-input-container">
-                      <input type="text" placeholder="User" className="filter-option-input" />
+                      <input type="text" placeholder="User" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'username')} value={filters.username} />
                     </div>
                   </div>
                   <div className="filter-option">
                   <p className="filter-option-title-text">Email</p>
                   <div className="filter-option-input-container">
-                      <input type="text" placeholder="Email" className="filter-option-input" />
+                      <input type="text" placeholder="Email" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'email')} value={filters.email} />
                     </div>
                   </div>
                   <div className="filter-option">
                   <p className="filter-option-title-text">Date</p>
                   <div className="filter-option-input-container">
-                      <input type="text" placeholder="Date" className="filter-option-input" />
+                      <input type="text" placeholder="Date" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'date')} value={filters.date} />
                       <Image 
                       src={filterCalendar}
                       alt="filter Calendar"
@@ -261,13 +274,13 @@ const Page: React.FC = () => {
                   <div className="filter-option">
                   <p className="filter-option-title-text">Phone Number</p>
                   <div className="filter-option-input-container">
-                      <input type="text" placeholder="Phone Number" className="filter-option-input" />
+                      <input type="text" placeholder="Phone Number" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'phone')} value={filters.phone} />
                     </div>
                   </div>
                   <div className="filter-option">
                   <p className="filter-option-title-text">Status</p>
                   <div className="filter-option-input-container">
-                      <input type="text" placeholder="Select" className="filter-option-input" />
+                      <input type="text" placeholder="Select" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'status')} value={filters.status} />
                       <Image 
                       src={filterDropDownArrow}
                       alt="filterDropDownArrow"
@@ -276,10 +289,10 @@ const Page: React.FC = () => {
                   </div>
                 </div>
                 <div className="filter-buttons-container">
-                  <div className="reset-button-container">
+                  <div className="reset-button-container" onClick={handleResetFilters}>
                     <p className="reset-button-text">Reset</p>
                   </div>
-                  <div className="filter-button-container">
+                  <div className="filter-button-container" onClick={applyFilters}>
                     <p className="filter-button-text">Filter</p>
                   </div>
                 </div>
