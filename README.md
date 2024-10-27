@@ -10,6 +10,12 @@ The application is deployed on Vercel and can be accessed via the following URL:
 
 [https://abiodun-olaoluwa-solomon-lendsqr-fe-test.vercel.app](https://abiodun-olaoluwa-solomon-lendsqr-fe-test.vercel.app)
 
+## Video Walkthrough 
+
+The loom video walkthrough for the app can be accessed through the following URL:
+
+(https://www.loom.com/share/76b680b41d4e4166ac99dc5d8194c3de?sid=c0ba76e4-d678-4f87-93ef-f93a20182c78)
+
 ## Login Details
 
 Email: test@lendsqr.com
@@ -143,7 +149,7 @@ The application is deployed on Vercel for its ease of use in integrating with a 
 
 A Loom video walkthrough has been created to visually and verbally explain the application's features, compare the implemented design to the given mockups, and justify certain design decisions.
 
-Video URL: [https://loom.com/share/](https://loom.com/share/<video-id>)
+Video URL: (https://www.loom.com/share/76b680b41d4e4166ac99dc5d8194c3de?sid=c0ba76e4-d678-4f87-93ef-f93a20182c78)
 
 In the video, I demonstrate the following:
 
