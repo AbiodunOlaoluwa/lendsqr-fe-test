@@ -106,7 +106,7 @@ const UserDetailsPage: React.FC = () => {
           
           {/* User tier representation */}
           <div className="user-tier">
-            <p>User's Tier</p>
+            <p>User&apos;s Tier</p>
             <div className="stars">
               <Image
                 src={filledStar}

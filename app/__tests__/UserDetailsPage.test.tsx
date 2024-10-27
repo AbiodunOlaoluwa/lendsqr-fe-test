@@ -9,7 +9,8 @@ jest.mock('next/navigation', () => ({
   useRouter: jest.fn(() => ({ push: jest.fn() }))
 }));
 
-const mockUsePathname = usePathname as jest.Mock;
+// const mockUsePathname = usePathname as jest.Mock;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const mockUseRouter = useRouter as jest.Mock<any>; // Specify the type of useRouter to allow functions like `mockReturnValue`
 
 // Mock data for localStorage
