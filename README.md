@@ -14,7 +14,13 @@ The application is deployed on Vercel and can be accessed via the following URL:
 
 The loom video walkthrough for the app can be accessed through the following URL:
 
-(https://www.loom.com/share/76b680b41d4e4166ac99dc5d8194c3de?sid=c0ba76e4-d678-4f87-93ef-f93a20182c78)
+https://www.loom.com/share/76b680b41d4e4166ac99dc5d8194c3de?sid=c0ba76e4-d678-4f87-93ef-f93a20182c78
+
+## Notion Page Documentation
+
+The page is accessible through the following link:
+
+https://www.notion.so/Abiodun-Olaoluwa-Solomon-Lendsqr-fe-test-12c8c02c696180298bb2c68c03a2faef?pvs=4
 
 ## Login Details
 
@@ -163,7 +169,8 @@ The application has been submitted for review with all the required elements:
 
 - **Live Deployment**: [https://abiodun-olaoluwa-solomon-lendsqr-fe-test.vercel.app](https://abiodun-olaoluwa-solomon-lendsqr-fe-test.vercel.app)
 - **GitHub Repository**: [https://github.com/AbiodunOlaoluwa/lendsqr-fe-test](https://github.com/AbiodunOlaoluwa/lendsqr-fe-test)
-- **Documentation**: Detailed Google Doc with explanations of design and decisions made.
+- **Documentation**: Detailed Notion Page with explanations of design and decisions made accessible through:
+  https://www.notion.so/Abiodun-Olaoluwa-Solomon-Lendsqr-fe-test-12c8c02c696180298bb2c68c03a2faef?pvs=4
 - **Video Review**: Available on Loom, showing detailed comparisons.
 
 After submitting the required information, an email was sent to [careers@lendsqr.com](mailto\:careers@lendsqr.com) notifying them of the submission.
