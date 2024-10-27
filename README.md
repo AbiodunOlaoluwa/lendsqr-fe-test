@@ -25,6 +25,7 @@ https://www.notion.so/Abiodun-Olaoluwa-Solomon-Lendsqr-fe-test-12c8c02c696180298
 ## Login Details
 
 Email: test@lendsqr.com
+
 Password: password123
 
 ## Repository Details
