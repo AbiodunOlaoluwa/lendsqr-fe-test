@@ -79,7 +79,7 @@ describe('LoginPage', () => {
     fireEvent.click(screen.getByText('LOG IN'));
 
     // Check if router replace was called with dashboard route
-    expect(replaceMock).toHaveBeenCalledWith('/dashboard');
+    expect(replaceMock).toHaveBeenCalledWith('/dashboard/users');
   });
 
   it('should toggle password visibility', () => {

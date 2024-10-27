@@ -21,5 +21,10 @@ body {
   height: 100%;
   display: flex;
   overflow: hidden;
-  gap: 0;
+  justify-content: space-between;
+}
+.dashboard-container .dashboard-body-container .dashboard-main-content {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
 }/*# sourceMappingURL=dashboard.css.map */

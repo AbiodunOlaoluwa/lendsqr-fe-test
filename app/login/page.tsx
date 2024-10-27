@@ -45,7 +45,7 @@ const LoginPage = () => {
     if (email === 'test@lendsqr.com' && password === 'password123') {
       setError('');
       // Redirect to dashboard upon successful login
-      router.replace('/dashboard');
+      router.replace('/dashboard/users');
     } else {
       setError('Invalid email or password');
     }

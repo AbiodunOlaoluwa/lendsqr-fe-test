@@ -1,16 +1,19 @@
-import NavBar from "../components/AppNavbar/NavBar";
-import SideBar from "../components/AppSideBar/SideBar";
-import "./dashboard.css";
+"use client";
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
-  return (
-    <div className="dashboard-container">
-      <NavBar />
-      <div className="dashboard-body-container">
-        <SideBar />
-      </div>
-    </div>
-  )
-}
+  const router = useRouter();
 
-export default Page
+  useEffect(() => {
+    // Redirect the user to /dashboard/users when the component is mounted
+    router.push("/dashboard/users");
+  }, [router]);
+
+  return (
+    <div>Redirecting to users page...</div>
+  );
+};
+
+export default Page;
