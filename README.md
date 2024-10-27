@@ -47,15 +47,7 @@ Repository URL: [https://github.com/AbiodunOlaoluwa/lendsqr-fe-test](https://git
 
 ![Login Page Screenshot](app/Assets/login%20page.png)
 
-
-### 3. Dashboard Page
-
-- After login, users are redirected to a dashboard page that showcases user statistics (e.g., active users, users with loans, users with savings).
-- The page features informative tabs that display statistics at a glance.
-- Users can filter data based on multiple criteria using the dropdown filters.
-
-
-### 4. Users List Page
+### 3. Users List Page
 
 - After login, users are redirected to a dashboard page that showcases user statistics (e.g., active users, users with loans, users with savings).
 - The page features informative tabs that display statistics at a glance.
@@ -69,7 +61,7 @@ Repository URL: [https://github.com/AbiodunOlaoluwa/lendsqr-fe-test](https://git
 ![Users Page Screenshot](app/Assets/users%20page%202.png)
 ![Users Page Screenshot](app/Assets/users%20page%203.png)
 
-### 5. User Details Page
+### 4. User Details Page
 
 - Displays the detailed information of the selected user, including personal information, employment details, and social links.
 - "Blacklist User" and "Activate User" buttons have been implemented (currently disabled for demo purposes).
