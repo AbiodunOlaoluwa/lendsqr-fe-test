@@ -33,38 +33,50 @@ Repository URL: [https://github.com/AbiodunOlaoluwa/lendsqr-fe-test](https://git
 
 ## Key Features Implemented
 
-### 1. Login Page
+### 1. Landing Page
+
+- Created a landing page out of necessity
+
+  ![Landing Page Screenshot](app/Assets/landing%20page.png)
+
+### 2. Login Page
 
 - A fully functional login page that validates user inputs.
 - Form validation implemented to ensure correct email and password formats.
 - Responsive design to provide optimal user experience on both desktop and mobile.
 
+![Login Page Screenshot](app/Assets/login%20page.png)
 
 
-### 2. Dashboard Page
+### 3. Dashboard Page
 
 - After login, users are redirected to a dashboard page that showcases user statistics (e.g., active users, users with loans, users with savings).
 - The page features informative tabs that display statistics at a glance.
 - Users can filter data based on multiple criteria using the dropdown filters.
 
 
+### 4. Users List Page
 
-### 3. Users List Page
-
-- A page that displays a list of all users with relevant details such as organization, email, phone number, and status.
+- After login, users are redirected to a dashboard page that showcases user statistics (e.g., active users, users with loans, users with savings).
+- The page features informative tabs that display statistics at a glance.
+- Users can filter data based on multiple criteria using the dropdown filters.
+- Displays a list of all users with relevant details such as organization, email, phone number, and status.
 - Users can click on any user's row to navigate to that user's details page.
 - Implemented pagination to efficiently handle and display the user list.
 - Search filters can be used to quickly locate users.
 
+![Users Page Screenshot](app/Assets/users%20page%201.png)
+![Users Page Screenshot](app/Assets/users%20page%202.png)
+![Users Page Screenshot](app/Assets/users%20page%203.png)
 
-
-### 4. User Details Page
+### 5. User Details Page
 
 - Displays the detailed information of the selected user, including personal information, employment details, and social links.
 - "Blacklist User" and "Activate User" buttons have been implemented (currently disabled for demo purposes).
 - A "Back to Users" link allows users to return to the user list.
 
-
+![Users Page Screenshot](app/Assets/user%20details%20page%201.png)
+![Users Page Screenshot](app/Assets/user%20details%20page%202.png)
 
 ## Architectural and Design Decisions
 
