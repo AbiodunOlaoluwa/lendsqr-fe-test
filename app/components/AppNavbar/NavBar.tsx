@@ -6,8 +6,6 @@ import magnifyingGlass from "@/app/Assets/searchbar-magnifying-glass.svg";
 import bell from "@/app/Assets/searchbar-notification-bell.svg";
 import avatar from "@/app/Assets/avatar.svg";
 import navbarDropdownArrow from "@/app/Assets/searchbar-dropdown-arrow.svg";
-import hamburgerIcon from "@/app/Assets/hamburger-icon.svg";
-import closeIcon from "@/app/Assets/close-icon.svg";
 import "./navbar.css";
 
 const NavBar = () => {

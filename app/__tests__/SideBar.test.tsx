@@ -1,10 +1,11 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import SideBar from '../components/AppSideBar/SideBar';
 import React from 'react';
 
 jest.mock('next/image', () => ({
   __esModule: true,
   default: ({ src, alt, width, height }: { src: string, alt: string, width?: number, height?: number }) => (
+    // eslint-disable-next-line @next/next/no-img-element
     <img src={src} alt={alt} width={width} height={height} />
   ),
 }));
