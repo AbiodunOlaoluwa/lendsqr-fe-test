@@ -4,6 +4,9 @@ import Page from '../dashboard/users/page';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 
+// This test doesn't work and I've tried but honestly can't figure it out
+// I think it has to do with the useRouter navigation
+
 jest.mock('next/navigation', () => ({
   useRouter: jest.fn(),
 }));

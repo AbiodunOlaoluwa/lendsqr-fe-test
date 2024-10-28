@@ -4,6 +4,9 @@ import UserDetailsPage from '../dashboard/users/[id]/page';
 import { useRouter } from 'next/navigation';
 import { jest } from '@jest/globals';
 
+// This test doesn't work and I've tried but honestly can't figure it out
+// I think it has to do with the useRouter navigation
+
 jest.mock('next/navigation', () => ({
   usePathname: jest.fn(() => '/dashboard/users/1'),
   useRouter: jest.fn(() => ({ push: jest.fn() }))
