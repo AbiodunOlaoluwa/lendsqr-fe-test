@@ -181,13 +181,16 @@ body {
                     position: absolute;
                     top: 2rem;
                     left: 0;
-                    min-width: 200px;
-                    max-width: 270px;
+                    width: 270px;
                     padding: 1rem;
                     background: rgba(255, 255, 255, 1);
                     box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
                     border-radius: 1px;
                     z-index: 1000;
+
+                    @media (max-width: 1250px) {
+                        min-width: 200px;
+                    }
 
                     .filter-options-container {
                         padding: 0.5rem 0;
