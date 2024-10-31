@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from 'react';
-import {useRouter} from 'next/navigation';;
+import { useRouter } from 'next/navigation';;
 import Image from 'next/image';
 import users from "@/app/Assets/users-page-users-icon.svg";
 import activeUsers from "@/app/Assets/users-page-active-users-icon.svg";
@@ -156,10 +156,10 @@ const Page: React.FC = () => {
     setCurrentPage(1); // Reset to the first page
   };
 
-    // Navigate to user details page
-    const navigateToUserDetails = (userId: string) => {
-      router.push(`/dashboard/users/${userId}`);
-    };
+  // Navigate to user details page
+  const navigateToUserDetails = (userId: string) => {
+    router.push(`/dashboard/users/${userId}`);
+  };
 
   return (
     <div className="users-page-container">
@@ -225,95 +225,101 @@ const Page: React.FC = () => {
         </div>
       </div>
       <div className="users-content-table-container">
-        {/* Table headers for users data */}
-        <div className="table-headers-container">
-          {['ORGANIZATION', 'USERNAME', 'EMAIL', 'PHONE NUMBER', 'DATE JOINED', 'STATUS'].map((header, index) => (
-            <div key={index} className="table-header">
-              <p className="table-header-text">{header}</p>
-              <Image 
-                src={filterIcon} 
-                alt='filter icon' 
-                className='filter' 
-                onClick={toggleFilterMenu} 
-              />
-              {/* Filter menu (initially hidden) */}
-              <div className="filter-menu hidden">
-                <div className="filter-options-container">
-                  <div className="filter-option">
-                    <p className="filter-option-title-text">Organization</p>
-                    <div className="filter-option-input-container">
-                      <input type="text" placeholder="Select" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'organization')} value={filters.organization} />
-                      <Image 
-                      src={filterDropDownArrow}
-                      alt="filterDropDownArrow"
-                      />
+        {/* Table for users data */}
+        <table className="users-table">
+          <thead>
+            <tr>
+              {['ORGANIZATION', 'USERNAME', 'EMAIL', 'PHONE NUMBER', 'DATE JOINED', 'STATUS'].map((header, index) => (
+                <th key={index} className="table-header">
+                  <div className="table-header-content">
+                    <span className="table-header-text">{header}</span>
+                    <Image
+                      src={filterIcon}
+                      alt='filter icon'
+                      className='filter'
+                      onClick={toggleFilterMenu}
+                    />
+                    {/* Filter menu (initially hidden) */}
+                    <div className="filter-menu hidden">
+                      <div className="filter-options-container">
+                        <div className="filter-option">
+                          <p className="filter-option-title-text">Organization</p>
+                          <div className="filter-option-input-container">
+                            <input type="text" placeholder="Select" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'organization')} value={filters.organization} />
+                            <Image
+                              src={filterDropDownArrow}
+                              alt="filterDropDownArrow"
+                            />
+                          </div>
+                        </div>
+                        <div className="filter-option">
+                          <p className="filter-option-title-text">Username</p>
+                          <div className="filter-option-input-container">
+                            <input type="text" placeholder="User" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'username')} value={filters.username} />
+                          </div>
+                        </div>
+                        <div className="filter-option">
+                          <p className="filter-option-title-text">Email</p>
+                          <div className="filter-option-input-container">
+                            <input type="text" placeholder="Email" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'email')} value={filters.email} />
+                          </div>
+                        </div>
+                        <div className="filter-option">
+                          <p className="filter-option-title-text">Date</p>
+                          <div className="filter-option-input-container">
+                            <input type="text" placeholder="Date" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'date')} value={filters.date} />
+                            <Image
+                              src={filterCalendar}
+                              alt="filter Calendar"
+                            />
+                          </div>
+                        </div>
+                        <div className="filter-option">
+                          <p className="filter-option-title-text">Phone Number</p>
+                          <div className="filter-option-input-container">
+                            <input type="text" placeholder="Phone Number" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'phone')} value={filters.phone} />
+                          </div>
+                        </div>
+                        <div className="filter-option">
+                          <p className="filter-option-title-text">Status</p>
+                          <div className="filter-option-input-container">
+                            <input type="text" placeholder="Select" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'status')} value={filters.status} />
+                            <Image
+                              src={filterDropDownArrow}
+                              alt="filterDropDownArrow"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="filter-buttons-container">
+                        <div className="reset-button-container" onClick={handleResetFilters}>
+                          <p className="reset-button-text">Reset</p>
+                        </div>
+                        <div className="filter-button-container" onClick={applyFilters}>
+                          <p className="filter-button-text">Filter</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="filter-option">
-                    <p className="filter-option-title-text">Username</p>
-                    <div className="filter-option-input-container">
-                      <input type="text" placeholder="User" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'username')} value={filters.username} />
-                    </div>
-                  </div>
-                  <div className="filter-option">
-                  <p className="filter-option-title-text">Email</p>
-                  <div className="filter-option-input-container">
-                      <input type="text" placeholder="Email" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'email')} value={filters.email} />
-                    </div>
-                  </div>
-                  <div className="filter-option">
-                  <p className="filter-option-title-text">Date</p>
-                  <div className="filter-option-input-container">
-                      <input type="text" placeholder="Date" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'date')} value={filters.date} />
-                      <Image 
-                      src={filterCalendar}
-                      alt="filter Calendar"
-                      />
-                    </div>
-                  </div>
-                  <div className="filter-option">
-                  <p className="filter-option-title-text">Phone Number</p>
-                  <div className="filter-option-input-container">
-                      <input type="text" placeholder="Phone Number" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'phone')} value={filters.phone} />
-                    </div>
-                  </div>
-                  <div className="filter-option">
-                  <p className="filter-option-title-text">Status</p>
-                  <div className="filter-option-input-container">
-                      <input type="text" placeholder="Select" className="filter-option-input" onChange={(e) => handleFilterChange(e, 'status')} value={filters.status} />
-                      <Image 
-                      src={filterDropDownArrow}
-                      alt="filterDropDownArrow"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="filter-buttons-container">
-                  <div className="reset-button-container" onClick={handleResetFilters}>
-                    <p className="reset-button-text">Reset</p>
-                  </div>
-                  <div className="filter-button-container" onClick={applyFilters}>
-                    <p className="filter-button-text">Filter</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        {/* Table content displaying paginated users */}
-        <div className="table-content-container">
-          {paginatedUsers.map(user => (
-            <div key={user.id} className="table-row" onClick={() => navigateToUserDetails(user.id)}>
-              <div className="table-cell">{user.organization}</div>
-              <div className="table-cell">{user.username}</div>
-              <div className="table-cell">{user.email}</div>
-              <div className="table-cell">{user.phone}</div>
-              <div className="table-cell">{user.dateJoined}</div>
-              <div className={`table-cell ${user.status}`}>{user.status}</div>
-            </div>
-          ))}
-        </div>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {paginatedUsers.map(user => (
+              <tr key={user.id} className="table-row" onClick={() => navigateToUserDetails(user.id)}>
+                <td className="table-cell">{user.organization}</td>
+                <td className="table-cell">{user.username}</td>
+                <td className="table-cell">{user.email}</td>
+                <td className="table-cell">{user.phone}</td>
+                <td className="table-cell">{user.dateJoined}</td>
+                <td className={`table-cell ${user.status.toLowerCase()}`}>{user.status}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
+
       {/* Pagination controls */}
       <div className="pagination-container">
         <div className="showing-container">
