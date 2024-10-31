@@ -289,6 +289,9 @@ body {
 .users-page-container .users-content-table-container .users-table tbody .table-row {
   border-bottom: 1px solid rgba(84, 95, 125, 0.1);
 }
+.users-page-container .users-content-table-container .users-table tbody .table-row:last-child {
+  border: none;
+}
 .users-page-container .users-content-table-container .users-table tbody .table-row:hover {
   cursor: pointer;
   background: rgba(84, 95, 125, 0.05);

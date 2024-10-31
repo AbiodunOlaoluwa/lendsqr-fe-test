@@ -318,6 +318,9 @@ body {
         .table-row {
           border-bottom: 1px solid rgba(84, 95, 125, 0.1);
 
+          &:last-child {
+            border: none;
+          }
 
           &:hover {
             cursor: pointer;
