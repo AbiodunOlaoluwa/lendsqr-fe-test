@@ -136,12 +136,12 @@ body {
     overflow-x: scroll;
 
     &::-webkit-scrollbar {
-        width: 8px
+      width: 8px;
     }
 
     &::-webkit-scrollbar-thumb {
-        background: rgba(84, 95, 125, 0.2);
-  border-radius: 4px;
+      background: rgba(84, 95, 125, 0.2);
+      border-radius: 4px;
     }
 
     @media (max-width: 1250px) {
@@ -155,12 +155,15 @@ body {
       margin-top: 1rem;
 
       thead {
+
         .table-header {
           text-align: left;
           padding: 1rem;
           position: relative;
           color: $text-secondary;
           font-weight: 600;
+          margin-bottom: 2rem;
+
 
           .table-header-content {
             display: flex;
@@ -177,7 +180,7 @@ body {
             }
 
             .filter-menu {
-              display: none;
+                display: none;
               position: absolute;
               top: 2rem;
               left: 0;
@@ -235,7 +238,68 @@ body {
                     }
                   }
                 }
+                &:active {
+                  display: flex;
+                }
+
+                &:hover {
+                  color: $text-primary;
+                  display: flex;
+                }
               }
+              .filter-buttons-container {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                justify-content: space-between;
+                margin-top: 1rem;
+
+                .reset-button-container {
+                  padding: 1rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 50%;
+                  color: $text-secondary;
+                  font-weight: 600;
+                  border: 1px solid rgba(84, 95, 125, 1);
+                  border-radius: 8px;
+
+                  &:hover {
+                    cursor: pointer;
+                    background: rgba(33, 63, 125, 0.1);
+                  }
+                }
+
+                .filter-button-container {
+                  padding: 1rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 50%;
+                  color: #ffffff;
+                  font-weight: 600;
+                  border: 1px solid rgba(57, 205, 204, 1);
+                  border-radius: 8px;
+                  background: rgba(57, 205, 204, 1);
+
+                  &:hover {
+                    cursor: pointer;
+                    background: rgba(57, 205, 204, 0.8);
+                  }
+                }
+              }
+            }
+            &:active &:focus .filter-menu,
+            .filter:focus + .filter-menu,
+            .filter-menu:focus {
+                display: block;
+            }
+
+            &:hover .filter-menu,
+            .filter:focus + .filter-menu,
+            .filter-menu:focus-within {
+                display: block;
             }
           }
         }
@@ -263,7 +327,7 @@ body {
             &.active {
               color: #39cd62;
               background: rgba(57, 205, 98, 0.1);
-              padding: 1rem;
+              padding: 0.5rem;
               display: flex;
               align-items: center;
               justify-content: center;
@@ -273,7 +337,7 @@ body {
             &.inactive {
               color: #545f7d;
               background: rgba(84, 95, 125, 0.1);
-              padding: 1rem;
+              padding: 0.5rem;
               display: flex;
               align-items: center;
               justify-content: center;
@@ -283,7 +347,7 @@ body {
             &.blacklisted {
               color: #e4033b;
               background: rgba(228, 3, 59, 0.1);
-              padding: 1rem;
+              padding: 0.5rem;
               display: flex;
               align-items: center;
               justify-content: center;

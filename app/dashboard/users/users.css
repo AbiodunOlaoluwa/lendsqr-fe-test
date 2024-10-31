@@ -150,6 +150,7 @@ body {
   position: relative;
   color: #545f7d;
   font-weight: 600;
+  margin-bottom: 2rem;
 }
 .users-page-container .users-content-table-container .users-table thead .table-header .table-header-content {
   display: flex;
@@ -218,6 +219,61 @@ body {
 .users-page-container .users-content-table-container .users-table thead .table-header .table-header-content .filter-menu .filter-options-container .filter-option .filter-option-input-container:focus-within {
   border: 2px solid #33b0b5;
 }
+.users-page-container .users-content-table-container .users-table thead .table-header .table-header-content .filter-menu .filter-options-container:active {
+  display: flex;
+}
+.users-page-container .users-content-table-container .users-table thead .table-header .table-header-content .filter-menu .filter-options-container:hover {
+  color: #213f7d;
+  display: flex;
+}
+.users-page-container .users-content-table-container .users-table thead .table-header .table-header-content .filter-menu .filter-buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.users-page-container .users-content-table-container .users-table thead .table-header .table-header-content .filter-menu .filter-buttons-container .reset-button-container {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  color: #545f7d;
+  font-weight: 600;
+  border: 1px solid rgb(84, 95, 125);
+  border-radius: 8px;
+}
+.users-page-container .users-content-table-container .users-table thead .table-header .table-header-content .filter-menu .filter-buttons-container .reset-button-container:hover {
+  cursor: pointer;
+  background: rgba(33, 63, 125, 0.1);
+}
+.users-page-container .users-content-table-container .users-table thead .table-header .table-header-content .filter-menu .filter-buttons-container .filter-button-container {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  color: #ffffff;
+  font-weight: 600;
+  border: 1px solid rgb(57, 205, 204);
+  border-radius: 8px;
+  background: rgb(57, 205, 204);
+}
+.users-page-container .users-content-table-container .users-table thead .table-header .table-header-content .filter-menu .filter-buttons-container .filter-button-container:hover {
+  cursor: pointer;
+  background: rgba(57, 205, 204, 0.8);
+}
+.users-page-container .users-content-table-container .users-table thead .table-header .table-header-content:active .users-page-container .users-content-table-container .users-table thead .table-header .table-header-content:focus .filter-menu,
+.users-page-container .users-content-table-container .users-table thead .table-header .table-header-content .filter:focus + .filter-menu,
+.users-page-container .users-content-table-container .users-table thead .table-header .table-header-content .filter-menu:focus {
+  display: block;
+}
+.users-page-container .users-content-table-container .users-table thead .table-header .table-header-content:hover .filter-menu,
+.users-page-container .users-content-table-container .users-table thead .table-header .table-header-content .filter:focus + .filter-menu,
+.users-page-container .users-content-table-container .users-table thead .table-header .table-header-content .filter-menu:focus-within {
+  display: block;
+}
 .users-page-container .users-content-table-container .users-table tbody .table-row:hover {
   cursor: pointer;
   background: rgba(84, 95, 125, 0.05);
@@ -236,7 +292,7 @@ body {
 .users-page-container .users-content-table-container .users-table tbody .table-row td.active {
   color: #39cd62;
   background: rgba(57, 205, 98, 0.1);
-  padding: 1rem;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -245,7 +301,7 @@ body {
 .users-page-container .users-content-table-container .users-table tbody .table-row td.inactive {
   color: #545f7d;
   background: rgba(84, 95, 125, 0.1);
-  padding: 1rem;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -254,7 +310,7 @@ body {
 .users-page-container .users-content-table-container .users-table tbody .table-row td.blacklisted {
   color: #e4033b;
   background: rgba(228, 3, 59, 0.1);
-  padding: 1rem;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
