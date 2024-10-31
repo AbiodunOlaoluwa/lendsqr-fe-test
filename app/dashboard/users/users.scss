@@ -18,6 +18,10 @@ body {
   margin: 4rem 5rem;
   letter-spacing: 0.07rem;
 
+  @media (max-width: 500px) {
+    margin: 3rem 4rem;
+  }
+
   .users-page-title-container {
     .users-page-title-text {
       font-size: 1.5rem;
@@ -147,6 +151,11 @@ body {
     @media (max-width: 1250px) {
       height: auto;
       min-height: fit-content;
+    }
+
+    @media (max-width: 500px) {
+      padding: 1rem;
+      width: fit-content;
     }
 
     .users-table {
@@ -307,7 +316,8 @@ body {
 
       tbody {
         .table-row {
-            
+          border-bottom: 1px solid rgba(84, 95, 125, 0.1);
+
 
           &:hover {
             cursor: pointer;
@@ -319,8 +329,7 @@ body {
           }
 
           td {
-            padding: 1rem;
-            border-bottom: 1px solid rgba(84, 95, 125, 0.1);
+            padding: 0 1rem;
             color: $text-secondary;
             font-weight: 400;
             overflow: hidden;

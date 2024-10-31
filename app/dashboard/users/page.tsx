@@ -313,7 +313,7 @@ const Page: React.FC = () => {
                 <td className="table-cell">{user.email}</td>
                 <td className="table-cell">{user.phone}</td>
                 <td className="table-cell">{user.dateJoined}</td>
-                <td className={`table-cell status-cell-container ${user.status.toLowerCase()}`}><span className={``}>{user.status}</span></td>
+                <td className={`table-cell status-cell-container ${user.status.toLowerCase()}`}>{user.status}</td>
               </tr>
             ))}
           </tbody>

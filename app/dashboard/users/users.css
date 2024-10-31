@@ -15,6 +15,11 @@ body {
   margin: 4rem 5rem;
   letter-spacing: 0.07rem;
 }
+@media (max-width: 500px) {
+  .users-page-container {
+    margin: 3rem 4rem;
+  }
+}
 .users-page-container .users-page-title-container .users-page-title-text {
   font-size: 1.5rem;
   color: #213f7d;
@@ -137,6 +142,13 @@ body {
     height: auto;
     min-height: -moz-fit-content;
     min-height: fit-content;
+  }
+}
+@media (max-width: 500px) {
+  .users-page-container .users-content-table-container {
+    padding: 1rem;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 .users-page-container .users-content-table-container .users-table {
@@ -274,6 +286,9 @@ body {
 .users-page-container .users-content-table-container .users-table thead .table-header .table-header-content .filter-menu:focus-within {
   display: block;
 }
+.users-page-container .users-content-table-container .users-table tbody .table-row {
+  border-bottom: 1px solid rgba(84, 95, 125, 0.1);
+}
 .users-page-container .users-content-table-container .users-table tbody .table-row:hover {
   cursor: pointer;
   background: rgba(84, 95, 125, 0.05);
@@ -282,8 +297,7 @@ body {
   border-bottom: none;
 }
 .users-page-container .users-content-table-container .users-table tbody .table-row td {
-  padding: 1rem;
-  border-bottom: 1px solid rgba(84, 95, 125, 0.1);
+  padding: 0 1rem;
   color: #545f7d;
   font-weight: 400;
   overflow: hidden;
